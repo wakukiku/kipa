@@ -1,0 +1,637 @@
+@import "./accessibility.css";
+:root {
+  --ink: #243dbb;
+  --paper: #fcfcfa;
+  --focus: #e1532e;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+h1,
+h2,
+.wordmark,
+.closing-note p {
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+}
+header {
+  padding: 22px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-bottom: 1px solid #bdc5ea;
+}
+.wordmark {
+  font-size: 54px;
+  line-height: 1;
+}
+.wordmark span {
+  display: block;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 10px;
+  margin-top: 10px;
+  letter-spacing: 0.08em;
+}
+nav {
+  display: flex;
+  gap: 40px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.cart-button {
+  padding: 12px 20px;
+  border: 1px solid #243dbb;
+  border-radius: 13px 3px 13px 3px;
+  background: #edf0ff;
+  font-weight: 700;
+  font-size: 14px;
+}
+.cart-button span {
+  margin-left: 12px;
+}
+.creative-board {
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  padding: 60px 5% 65px;
+  gap: 50px;
+}
+.intro {
+  padding: 12px 0;
+}
+.small-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+.intro h1 {
+  font-size: clamp(45px, 5.2vw, 78px);
+  line-height: 1.08;
+  margin: 28px 0 22px;
+  letter-spacing: -0.045em;
+}
+.intro h1 em {
+  font-style: normal;
+  color: #d95137;
+}
+.intro p {
+  font-size: 18px;
+  line-height: 1.65;
+}
+.primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: #243dbb;
+  color: white;
+  padding: 16px 22px;
+  border: 0;
+  border-radius: 4px 16px 4px 16px;
+  font-size: 16px;
+  font-weight: 800;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.primary:hover {
+  background: #142783;
+  transform: rotate(-1deg);
+}
+.primary > span {
+  font-size: 25px;
+  font-weight: 400;
+}
+.intro .primary {
+  max-width: 270px;
+  margin-top: 30px;
+}
+.studio-photo {
+  position: relative;
+  margin: 12px 0 25px;
+}
+.studio-photo > img {
+  width: 100%;
+  height: 390px;
+  border-radius: 100px 6px 6px 6px;
+  object-position: 45% center;
+}
+.photo-caption {
+  position: absolute;
+  bottom: -22px;
+  right: -15px;
+  background: #f5d265;
+  color: #3c361a;
+  padding: 18px 26px;
+  font-size: 16px;
+  font-weight: 800;
+  transform: rotate(-6deg);
+  box-shadow: 0 6px 18px #34241216;
+}
+.color-tabs {
+  position: absolute;
+  left: -20px;
+  bottom: 25px;
+  display: flex;
+  transform: rotate(8deg);
+}
+.color-tabs i {
+  display: block;
+  width: 48px;
+  height: 65px;
+  box-shadow: 0 4px 5px #0001;
+}
+.palette-lab {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1.25fr;
+  gap: 40px;
+  align-items: center;
+  background: #edf0ff;
+  padding: 44px 5%;
+  border-block: 1px solid #bdc5ea;
+}
+.palette-heading h2 {
+  font-size: 34px;
+  line-height: 1.13;
+  margin: 15px 0;
+}
+.palette-heading p {
+  max-width: 265px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.color-picker {
+  text-align: center;
+}
+.color-picker label {
+  font-size: 13px;
+  font-weight: 700;
+}
+.color-picker input {
+  display: block;
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 14px auto;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+.color-picker input::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.color-picker input::-webkit-color-swatch {
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 3px 9px #2737ab2b;
+}
+.color-picker output {
+  font-size: 12px;
+  letter-spacing: 0.13em;
+}
+.color-presets {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.color-presets button {
+  width: 33px;
+  min-height: 33px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.swatches > div {
+  min-width: 0;
+}
+.swatches span {
+  display: block;
+  height: 90px;
+  border-radius: 3px;
+}
+.swatches b {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.palette-result .primary {
+  font-size: 14px;
+  gap: 10px;
+  width: 100%;
+}
+.palette-result small {
+  font-size: 12px;
+  display: block;
+  margin-top: 14px;
+}
+.catalog {
+  padding: 60px 5%;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.section-heading h2 {
+  font-size: 36px;
+  letter-spacing: -0.025em;
+}
+.section-heading > span {
+  font-size: 13px;
+}
+.filters {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+.categories button {
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  padding: 9px 16px;
+  border-radius: 6px;
+}
+.categories button.active {
+  background: #f6d66f;
+}
+.search-sort input,
+.search-sort select {
+  border: 1px solid #c5cced;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 13px;
+  padding: 10px 12px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+article {
+  border: 1px solid #c9cdeb;
+  border-radius: 7px;
+  overflow: hidden;
+  background: white;
+}
+.product-visual {
+  display: block;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+.pigment {
+  height: 215px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  text-shadow: 0 1px 3px #0006;
+}
+.pigment span {
+  font-size: 10px;
+  letter-spacing: 0.13em;
+}
+.pigment strong {
+  font-family: "Yeseva One", serif;
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.pigment small {
+  font-size: 11px;
+}
+article:nth-child(2) .pigment,
+article:nth-child(4) .pigment {
+  color: #243151;
+  text-shadow: none;
+}
+.product-visual img {
+  height: 215px;
+  width: 100%;
+}
+.product-info {
+  padding: 22px;
+}
+.product-code {
+  font-size: 11px;
+  float: right;
+  color: #8c96c4;
+}
+.product-name {
+  display: block;
+  min-height: 0;
+  border: 0;
+  background: none;
+  padding: 0;
+  text-align: left;
+  font-size: 19px;
+  font-weight: 800;
+}
+.product-info p {
+  font-size: 13px;
+  color: #6777ae;
+  margin: 6px 0 20px;
+}
+.buy-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.buy-row strong {
+  font-size: 21px;
+}
+.buy-row button {
+  background: #fff;
+  border: 1px solid #243dbb;
+  border-radius: 5px 12px 5px 12px;
+  padding: 9px 15px;
+  font-weight: 800;
+  font-size: 14px;
+}
+.buy-row button:hover {
+  background: #243dbb;
+  color: white;
+}
+.closing-note {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 38px 5%;
+  background: #f5ce60;
+  color: #273aad;
+}
+.closing-note > span {
+  font-size: 90px;
+}
+.closing-note p {
+  font-size: 40px;
+  line-height: 1.15;
+  margin: 0;
+}
+.closing-note em {
+  font-style: normal;
+  color: #ca4a2d;
+}
+.closing-note a {
+  border-bottom: 2px solid;
+  font-weight: 800;
+  padding: 10px 0;
+}
+footer {
+  padding: 30px 5%;
+  font-size: 13px;
+}
+dialog {
+  border: 2px solid #243dbb;
+  border-radius: 5px 25px 5px 25px;
+}
+.toast {
+  border-radius: 8px;
+}
+.cart-line h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+}
+@media (max-width: 1000px) {
+  .palette-lab {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .palette-heading {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  .palette-heading h2 {
+    font-size: 30px;
+  }
+  .palette-heading > span {
+    max-width: 140px;
+  }
+  .palette-heading p {
+    margin: 0;
+  }
+  .creative-board {
+    gap: 30px;
+  }
+  .intro h1 {
+    font-size: 54px;
+  }
+  .studio-photo > img {
+    height: 380px;
+  }
+  .filters {
+    flex-wrap: wrap;
+  }
+  .section-heading {
+    display: block;
+  }
+  .section-heading > span {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 650px) {
+  header {
+    padding: 20px 6%;
+    flex-wrap: wrap;
+  }
+  .wordmark {
+    font-size: 42px;
+  }
+  .cart-button {
+    font-size: 12px;
+    padding: 10px 13px;
+  }
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .creative-board {
+    grid-template-columns: 1fr;
+    padding: 25px 6% 40px;
+    gap: 15px;
+  }
+  .intro h1 {
+    font-size: 45px;
+  }
+  .intro p {
+    font-size: 16px;
+  }
+  .small-label {
+    font-size: 10px;
+  }
+  .studio-photo > img {
+    height: 270px;
+  }
+  .studio-photo {
+    margin: 20px 10px;
+  }
+  .photo-caption {
+    right: -5px;
+    font-size: 14px;
+  }
+  .palette-lab {
+    padding: 35px 6%;
+    grid-template-columns: 1fr;
+  }
+  .palette-heading {
+    display: block;
+    grid-column: auto;
+  }
+  .palette-heading h2 br {
+    display: none;
+  }
+  .palette-heading p {
+    max-width: none;
+  }
+  .palette-heading > span {
+    max-width: none;
+  }
+  .color-picker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .color-picker input {
+    grid-row: 1/4;
+    grid-column: 2;
+  }
+  .color-picker output {
+    margin-top: 10px;
+  }
+  .swatches span {
+    height: 75px;
+  }
+  .catalog {
+    padding: 35px 6%;
+  }
+  .section-heading h2 {
+    font-size: 30px;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .pigment {
+    padding: 15px;
+    height: 170px;
+  }
+  .pigment strong {
+    font-size: 21px;
+  }
+  .pigment small {
+    font-size: 10px;
+  }
+  .product-visual img {
+    height: 170px;
+  }
+  .product-info {
+    padding: 15px;
+  }
+  .product-name {
+    font-size: 15px;
+  }
+  .product-code {
+    display: none;
+  }
+  .product-info p {
+    font-size: 12px;
+    min-height: 36px;
+  }
+  .buy-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .buy-row strong {
+    font-size: 18px;
+  }
+  .buy-row button {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+  .closing-note {
+    flex-wrap: wrap;
+  }
+  .closing-note > span {
+    font-size: 65px;
+  }
+  .closing-note p {
+    font-size: 32px;
+  }
+  .closing-note > a {
+    font-size: 14px;
+  }
+  .search-sort select {
+    max-width: 155px;
+  }
+}
+
+/* Readable labels at every viewport. */
+.small-label,
+.wordmark span,
+.color-picker output,
+.palette-result small,
+.pigment span,
+.pigment small,
+.product-code {
+  font-size: 12px;
+}
+.section-heading > span,
+.search-sort input,
+.search-sort select,
+.palette-heading p,
+.swatches b,
+.product-info p,
+.color-picker label {
+  font-size: 14px;
+}
+.pigment strong {
+  overflow-wrap: normal;
+}
+.swatches b {
+  font-weight: 700;
+}
+.product-info p {
+  min-height: 42px;
+}
+.color-sample {
+  min-height: 250px;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 1px 4px #0009;
+  font-size: 24px;
+}
+.cart-line .color-sample {
+  min-height: 112px;
+  font-size: 12px;
+  padding: 8px;
+}
+.dialog-content h2 {
+  overflow-wrap: anywhere;
+}

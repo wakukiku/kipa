@@ -1,0 +1,77 @@
+{
+  "id": "kipa",
+  "name": "КИПА",
+  "description": "Краски и инструменты для больших и маленьких идей.",
+  "products": [
+    {
+      "id": "k1",
+      "name": "Ультрамарин",
+      "category": "Краски",
+      "price": 620,
+      "subtitle": "Акрил · 60 мл · PB29",
+      "image": "assets/paint.jpg",
+      "hex": "#294fb8",
+      "stock": 30,
+      "material": "Акрил",
+      "size": "60 мл"
+    },
+    {
+      "id": "k2",
+      "name": "Кадмий жёлтый",
+      "category": "Краски",
+      "price": 680,
+      "subtitle": "Акрил · 60 мл · PY35",
+      "image": "assets/paint2.jpg",
+      "hex": "#f4cd3c",
+      "stock": 24,
+      "material": "Акрил",
+      "size": "60 мл"
+    },
+    {
+      "id": "k3",
+      "name": "Краплак",
+      "category": "Краски",
+      "price": 640,
+      "subtitle": "Акрил · 60 мл · PR83",
+      "image": "assets/paint3.jpg",
+      "hex": "#bf3f69",
+      "stock": 22,
+      "material": "Акрил",
+      "size": "60 мл"
+    },
+    {
+      "id": "k4",
+      "name": "Титановые белила",
+      "category": "Краски",
+      "price": 590,
+      "subtitle": "Акрил · 60 мл · PW6",
+      "image": "assets/paint4.jpg",
+      "hex": "#f4f1e7",
+      "stock": 35,
+      "material": "Акрил",
+      "size": "60 мл"
+    },
+    {
+      "id": "k5",
+      "name": "Студийная тройка",
+      "category": "Инструменты",
+      "price": 1290,
+      "subtitle": "Кисти № 2, 6, 12 · синтетика",
+      "image": "assets/brush.jpg",
+      "stock": 15,
+      "material": "Синтетический ворс",
+      "size": "3 кисти"
+    },
+    {
+      "id": "k6",
+      "name": "Поле А4",
+      "category": "Бумага",
+      "price": 890,
+      "subtitle": "24 листа · 300 г/м²",
+      "image": "assets/paper.jpg",
+      "stock": 18,
+      "material": "Хлопок и целлюлоза",
+      "size": "210 × 297 мм"
+    }
+  ]
+}
